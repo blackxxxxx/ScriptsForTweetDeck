@@ -5,5 +5,5 @@ https://chrome.google.com/webstore/detail/scriptautorunner/gpgjofmpmjjopcogjgdld
 
 ・ScriptAutoRunnerの設定で特定のサイトでだけ実行するように変更すること
 　（でないと全てのサイトでスクリプトがぶん回り続ける）
-　hostname指定部分に以下のURLを入れれば良い
-　https://tweetdeck.twitter.com/,https://twitter.com/
+　hostname指定部分に以下の文字列を入れれば良い
+　twitter.com
