@@ -1,5 +1,6 @@
 (function() {
-  const bgcolor = '#004a14';
+  const bgcolor = '#1a3606';
+  const searchTarget = '.r-knv0ih'
 
   // 指定間隔で監視(msec)
   setInterval(setBgColorOfCircleTweets, 200);
@@ -7,14 +8,9 @@
   //サークルツイートの背景色を変える
   function setBgColorOfCircleTweets()
   {
-    let tweetsWithInactiveRT = document.querySelectorAll('article:has(.r-icoktb)');
-
-    Array.prototype.map.call(tweetsWithInactiveRT, function(tweet) {
-      //鍵アカウントの場合は背景色を変えない
-      isKeyAccount = tweet.matches('article:has([data-testid="icon-lock"])');
-      if(!isKeyAccount){
-        tweet.setAttribute('style','background-color: '+bgcolor);
-      }
+    let tweetsWithCircleDescription = document.querySelectorAll('article:has('+searchTarget+')');
+    Array.prototype.map.call(tweetsWithCircleDescription, function(tweet) {
+      tweet.setAttribute('style','background-color: '+bgcolor);
     });
   }
 }());
